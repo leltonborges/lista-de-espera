@@ -1,5 +1,4 @@
 const pacientes = [];
-// pacientes.push({name: 'Maria', count: 1, type: 'normal'});
 
 let count = 0;
 
@@ -11,6 +10,8 @@ bnt_normal.addEventListener('click', function () {
         count: ++count,
         type: 'normal'
     })
+    focusInput()
+    loadArray()
 })
 
 bnt_prefe.addEventListener('click', function () {
@@ -29,6 +30,8 @@ bnt_prefe.addEventListener('click', function () {
         pacientes.unshift(obj)
 
     }
+    focusInput()
+    loadArray()
 })
 
 const createElement = (type = 'li', id, content = '') => {
@@ -41,9 +44,15 @@ const createElement = (type = 'li', id, content = '') => {
 const loadArray = () => {
     const list = document.querySelector('section#lista');
     if (pacientes.length) {
+        let isExistsUl = document.querySelector('#lista ul');
+        let isExistsP = document.querySelector('#lista p');
+        
+        if(isExistsUl) list.removeChild(isExistsUl)
+        if(isExistsP) list.removeChild(isExistsP)
+
         let ul = document.createElement('ul')
         pacientes.forEach((v, k) => {
-            ul.appendChild(createElement('li', k, v.name))
+            ul.appendChild(createElement('li', k, `${v.name} - ${v.type}`))
         })
         list.appendChild(ul)
     } else {
@@ -56,3 +65,9 @@ const loadArray = () => {
 window.addEventListener('load', function(){
     loadArray()
 })
+
+
+const focusInput = () => {
+    pacient.value = ''
+    pacient.focus()
+}
