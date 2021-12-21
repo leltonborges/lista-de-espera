@@ -32,7 +32,9 @@ main {
 }
 
 section{
-    width: 40vw;
+    min-width: 40vw;
+    margin-bottom: 30px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 section > div{
@@ -63,6 +65,11 @@ input{
     outline: none;
     border-radius: 5px;
     margin-top: 5px;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 10px;
 }
 
 input:focus{
