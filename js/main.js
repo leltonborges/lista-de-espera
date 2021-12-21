@@ -1,4 +1,4 @@
-const pacientes = [];
+let pacientes = [];
 
 let count = 0;
 
@@ -43,6 +43,12 @@ bnt_next.addEventListener('click', function () {
     const first = pacientes.shift()
     proximo_paciente.textContent = first.name
 
+    loadArray()
+})
+
+
+bnt_reset.addEventListener('click', function(){
+    pacientes = []
     loadArray()
 })
 
