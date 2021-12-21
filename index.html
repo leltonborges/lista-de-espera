@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" async></script>
-    <title>Consutorio</title>
-</head>
-<body>
-    <main>
-        <section class="flex">
-            <div class="buttons">
-                <button id="bnt_proximo" type="button">Chamar poximo</button>
-                <button id="bnt_reset" type="button">Limpar lista</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/main.js" async></script>
+        <title>Consutorio</title>
+    </head>
+    <body>
+        <main>
+            <section class="flex">
+                <div class="buttons">
+                    <button id="bnt_next" type="button">Chamar poximo</button>
+                    <button id="bnt_reset" type="button">Limpar lista</button>
+                    <div class="flex" id="atendimento">
+                        <label for="proximo_paciente">Proximo: &nbsp;</label>
+                        <p id="proximo_paciente"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="flex">
                 <div class="flex">
-                <label for="proximo_paciente">Proximo: </label>
-                <p id="proximo_paciente"></p>
-            </div>
-            </div>
-        </section>
-        <section class="flex">
-            <div class="flex">
-                <label for="paciente">Paciente</label>
-                <input type="text" id="pacient">
-            </div>
-            <div>
-                <button id="bnt_normal" type="button">Normal</button>
-                <button id="bnt_prefe" type="button">Preferencial</button>
-            </div>
-        </section>
+                    <label for="paciente">Paciente</label>
+                    <input type="text" id="pacient">
+                </div>
+                <div>
+                    <button id="bnt_normal" type="button">Normal</button>
+                    <button id="bnt_prefe" type="button">Preferencial</button>
+                </div>
+            </section>
 
-        <section class="flex" id="lista">
-            <h1>Lista de espera</h1>
-        </section>
-    </main>
-</body>
+            <section class="flex" id="lista">
+                <h1>Lista de espera</h1>
+            </section>
+        </main>
+    </body>
 </html>

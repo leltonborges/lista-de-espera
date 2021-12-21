@@ -34,6 +34,18 @@ bnt_prefe.addEventListener('click', function () {
     loadArray()
 })
 
+bnt_next.addEventListener('click', function () {
+    if(!pacientes.length) {
+        proximo_paciente.textContent = `Não há pacientes`
+        return;
+    }
+
+    const first = pacientes.shift()
+    proximo_paciente.textContent = first.name
+
+    loadArray()
+})
+
 const createElement = (type = 'li', id, content = '') => {
     let element = document.createElement(type);
     element.textContent = `${id+1}º - ${content}`;
@@ -44,11 +56,7 @@ const createElement = (type = 'li', id, content = '') => {
 const loadArray = () => {
     const list = document.querySelector('section#lista');
     if (pacientes.length) {
-        let isExistsUl = document.querySelector('#lista ul');
-        let isExistsP = document.querySelector('#lista p');
-        
-        if(isExistsUl) list.removeChild(isExistsUl)
-        if(isExistsP) list.removeChild(isExistsP)
+        isExistsElements()
 
         let ul = document.createElement('ul')
         pacientes.forEach((v, k) => {
@@ -56,13 +64,24 @@ const loadArray = () => {
         })
         list.appendChild(ul)
     } else {
+        isExistsElements()
         let p = document.createElement('p');
         p.textContent = 'Sem pacientes'
         list.appendChild(p)
     }
 }
 
-window.addEventListener('load', function(){
+const isExistsElements = () => {
+    const list = document.querySelector('section#lista');
+    
+    let isExistsUl = document.querySelector('#lista ul');
+    let isExistsP = document.querySelector('#lista p');
+
+    if (isExistsUl) list.removeChild(isExistsUl)
+    if (isExistsP) list.removeChild(isExistsP)
+}
+
+window.addEventListener('load', function () {
     loadArray()
 })
 

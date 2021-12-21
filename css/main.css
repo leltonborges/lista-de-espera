@@ -34,7 +34,6 @@ main {
 section{
     min-width: 40vw;
     margin-bottom: 30px;
-    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -77,35 +76,6 @@ input:focus{
     outline: 1px solid #4c8566;
 }
 
-label{
-    font-size: 2rem;
-}
-
-#bnt_normal{
-    background: var(--bg-success);
-}
-#bnt_normal:hover{
-    background: var(--bg-success-hover);
-}
-
-
-#bnt_prefe{
-    background: var(--btn-remove);
-}
-
-#bnt_prefe:hover{
-    background: var(--btn-remove-hover);
-    
-}
-
-.flex{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    flex-direction: column;
-}
-
 main > section.flex:last-child{
     align-items: center;
 }
@@ -120,6 +90,49 @@ ul{
     column-gap: 20px;
 }
 
+label{
+    font-size: 2rem;
+}
+
+#bnt_normal, #bnt_next{
+    background: var(--bg-success);
+}
+
+#bnt_normal:hover, #bnt_next:hover{
+    background: var(--bg-success-hover);
+}
+
+#bnt_prefe, #bnt_reset{
+    background: var(--btn-remove);
+}
+
+#bnt_prefe:hover, #bnt_reset:hover{
+    background: var(--btn-remove-hover);
+}
+
+#atendimento{
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .flex > .buttons{
     align-self: center;
+}
+
+#proximo_paciente {
+    font-size: 1.7rem;
+}
+
+#proximo_paciente::first-letter{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
 }
