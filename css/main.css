@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+    --bg-default: #c4c4c4;
+    --bg-secundary: #b3b5b3;
+    --bg-success: #1d521683;
+    --bg-success-hover: #1d5216;
+    --btn-remove:#740e0e81;
+    --btn-remove-hover: #740e0e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    background: var(--bg-default);
+    background-attachment: fixed;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 40vw;
+}
+
+section > div{
+    margin: 10px 5px;
+}
+
+section > div:last-child{
+    align-self: flex-end;
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+button:first-child{
+    margin-right: 10px;
+}
+
+button:hover{
+    transition: ease-in-out .5s;
+}
+
+input{
+    border: none;
+    height: 30px;
+    padding: 3px 7px;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+input:focus{
+    outline: 1px solid #4c8566;
+}
+
+label{
+    font-size: 2rem;
+}
+
+#bnt_normal{
+    background: var(--bg-success);
+}
+#bnt_normal:hover{
+    background: var(--bg-success-hover);
+}
+
+
+#bnt_prefe{
+    background: var(--btn-remove);
+}
+
+#bnt_prefe:hover{
+    background: var(--btn-remove-hover);
+    
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    flex-direction: column;
+}
